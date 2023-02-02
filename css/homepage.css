@@ -1,0 +1,97 @@
+:root {
+    --wht-grad-bg: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 42.19%, #CBCBCB 75.52%);
+    --grn-grad-bg: linear-gradient(180deg, #006B4C 9.89%, #00563B 54.95%, #003939 97.65%);
+    --blck-grad-bg: linear-gradient(180deg, #221E1E 0%, #100A0C 100%);
+    --clr-scheme-grn: #205B2D;
+    --clr-scheme-blck: #100A0C;
+    --clr-scheme-drk-gry: #221E1E;
+    --clr-scheme-gry: #919397;
+    --main-font: 'Montserrat';
+}
+
+body {
+    background: var(--wht-grad-bg);
+    font-family: var(--main-font);
+}
+
+/* default container */
+.container {
+    max-width: 1920px;
+    width: 100%;
+}
+
+/* header, redimensiona conforme a página e o conteúdo, alinhado ao topo do html */
+header {
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+
+/* navbar, largura def. conforme a página, altura def. no design,posicionamento fixo para seguir a rolagem, z-index para manter a cima de outros conteúdos */
+nav {
+    position: fixed;
+    top: 0;
+    height: 90px;
+    width: 100%;
+    z-index: 1;
+    background: white;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* float clear, usar antes de colocar um float dentro da tag */
+nav:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* contenção e alinhamento da div-navbar, como uma caixa dentro da tag nav, para posicionar seu conteudo*/
+.navbar {
+    max-width: 1200px;
+    position: relative;
+    /* centralização automática com margin right e left */
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* logomarca da empresa */
+.navbar__logo {
+    width: 195.58px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+/* posicinamento da lista de links da navbar */
+.navbar ul {
+    float: right;
+    /* altura da caixa da lista */
+    height: 90px;
+    /* altura da linha da caixa de texto */
+    line-height: 90px;
+    margin: 0;
+}
+
+/* configuração dos itens da lista */
+.navbar li {
+    list-style: none;
+    float: left;
+    margin: 0 15px;
+}
+
+/* estilização dos textos dos links */
+.navbar__link {
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+
+.navbar__link--select:hover {
+    scale: 1.2;
+}
+
+.carousel {
+    height: 100vh;
+}
