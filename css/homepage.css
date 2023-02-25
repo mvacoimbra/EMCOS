@@ -10,15 +10,26 @@
     --main-font: 'Montserrat';
 }
 
+html {
+    width: auto;
+}
+
 body {
     font-family: var(--main-font);
     background: var(--wht-grad-bg);
+    width: auto;
 }
 
-.header {
+.container-header {
+    min-height: 90px;
+    width: auto;
+    margin-bottom: 0px;
+}
+
+.nav-space {
+    min-height: 90px;
     height: auto;
-    width: 100vw;
-    margin-bottom: 10em;
+    width: 100%;
 }
 
 .nav {
@@ -26,6 +37,7 @@ body {
     background-color: var(--clr-scheme-wht);
     /* dimensões */
     min-height: 90px;
+    height: auto;
     width: 100%;
     /* alinhamentos */
     display: grid;
@@ -58,21 +70,24 @@ body {
     justify-content: left;
     column-gap: 2em;
     padding-left: 5em;
+    flex-shrink: 0;
     /* estilos */
     color: var(--clr-scheme-wht);
     /* back */
-    background: url("../imgs/header/greenBg.png");
+    background: url("../imgs/header/greenBg4k.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-
-
-    
 }
 
 .header__navitem:hover {
     scale: 1.1;
 }
+
+.header__navitem {
+    white-space: nowrap;
+}
+
 
 .header__navitem a {
     /* posição */
@@ -90,6 +105,7 @@ body {
 .header__navitem img {
     height: 1em;
     margin-right: 0.3em;
+
 }
 
 .nav__button {
@@ -99,67 +115,8 @@ body {
     margin-left: 1em;
 }
 
-.container {
-    height: auto;
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
+.container-main {
+    margin-top: 20px;
 }
 
-.gallery-wrapper {
-    overflow-x: auto;
-}
 
-.gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 15px;
-}
-
-.arrow-left,
-.arrow-right {
-    position: absolute;
-    top: 15%;
-    left: 5em;
-    right: auto;
-    bottom: 0;
-    font-size: 20px;
-    height: fit-content;
-    width: fit-content;
-    text-align: center;
-    color: var(--clr-scheme-blck);
-    cursor: pointer;
-    border: none;
-    background: transparent;
-}
-
-.arrow-right {
-    left: auto;
-    right: 5em;
-}
-
-.item {
-    width: 250px;
-    height: 250px;
-}
-
-#zero {
-    width: 1px;
-    height: 1px;
-    display: block;
-}
-
-.current-item {
-    opacity: 0.4;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.gallery-wrapper::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.gallery-wrapper {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}

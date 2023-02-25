@@ -37,12 +37,20 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
+/* blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
-}
+} */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* limpeza simples de todas as tags e pseudo-tags */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
 }

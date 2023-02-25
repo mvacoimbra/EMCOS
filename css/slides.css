@@ -1,0 +1,161 @@
+/* caixa que envolve todo o slide+botoes */
+.wrapper {
+    display: flex;
+    /* alinhamento vertical */
+    align-items: center;
+    height: 80vh;
+}
+
+/* o slide-wrapper é o elemento pai (caixa) do slide-list, dos botões de nav left e right e dos botões de controle inferiores (bolinhas) */
+.slide-wrapper {
+    display: flex;
+    /* direcionando os itens do display flex na vertical */
+    flex-direction: column;
+    /* devido ao direction: column o alinhamento é vertical */
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* eliminando a barra de rolagem ocultando os itens do overflow */
+    overflow: hidden;
+}
+
+/* é o elemento pai (caixa) dos elementos slide-item */
+.slide-list {
+    display: flex;
+    height: 100%;
+}
+
+.slide-item {
+    /* flex-shrink "%" para não deixar o display flex do elemento pai slide-list encolher o slide-item, permitindo assim o overflow*/
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+/* caixa que engloba: imagem, título e descrição */
+.slide-content {
+    /* posição relativa ao próprio elemento */
+    position: relative;
+    height: 100%;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.slide-description {
+    /* posição absoluta, em relação ao elemento pai slide-content */
+    position: absolute;
+    color: var(--clr-scheme-wht);
+    width: 100%;
+    left: 200px;
+    bottom: 200px;
+}
+
+.description-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.description-txt {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* botões esquerda/direita */
+.slide-nav-button {
+    color: var(--clr-scheme-wht);
+    background: transparent;
+    font-size: 36px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    border: none;
+}
+
+.slide-nav-button:hover {
+    scale: 1.15;
+}
+
+/* botao esquerda */
+.slide-nav-previous {
+    left: 100px;
+}
+
+/* botao direita */
+.slide-nav-next {
+    right: 100px;
+}
+
+/* caixa que engloba os botões bolinhas */
+.slide-controls {
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+/* bolinhas */
+.slide-control-button {
+    font-size: 10px;
+    background: transparent;
+    color: var(--clr-scheme-wht);
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.slide-control-button:hover {
+    scale: 1.2;
+}
+
+/* ao declarar as 2 classes juntas, o seletor vai buscar um elmento que possua as 2 classes.
+Quando são declaras com "espaço" o seletor vai buscar uma classe dentro da outra
+ex: buscaria um elemento com a classe .active dentro de um elemento que possui a classe .slide-control-button */
+.slide-control-button.active {
+    color: var(--clr-scheme-grn);
+    scale: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        height: 50vh;
+    }
+
+    .slide-nav-button{
+        margin-top: -20px;
+        font-size: 28px;
+    }
+
+    .slide-nav-previous {
+        left: 10px;
+    }
+
+    .slide-nav-next {
+        right: 10px;
+    }
+    
+    .slide-description {
+        left: 100px;
+        bottom: 0px;
+    }
+    
+    .description-title {
+        font-size: 30px;
+    }
+    
+    .description-txt {
+        font-size: 15px;
+    }
+
+    .slide-controls {
+        margin: 15px auto 0;
+    }
+    .slide-control-button {
+        font-size: 10px;
+    }
+}
+
+
+

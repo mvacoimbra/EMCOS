@@ -1,56 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EMCOS Engenharia</title>
-        <link rel="icon" type="image/png" href="imgs/header/emcos-icon.png"/>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/homepage.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header class="header">
-            <nav class="nav">
-                <a href="#"><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="header__logo"></a>
-                    <ul class="header__navlist">
-                        <li class="header__navitem">
-                            <img src="imgs/header/nav-item-dec.png">
-                            <a href="#" class="header__navlink">Quem somos</a>
-                        </li>
-                        <li class="header__navitem">
-                            <img src="imgs/header/nav-item-dec.png">
-                            <a href="#" class="header__navlink">Projetos</a>
-                        </li>
-                        <li class="header__navitem">
-                            <img src="imgs/header/nav-item-dec.png">
-                            <a href="#" class="header__navlink">Contato</a>
-                        </li>
-                        <li class="header__navitem nav__button">
-                            <a href="#" class="header__navlink">Orçamento</a>
-                        </li>
-                    </ul>
-            </nav>
-        </header>
 
-        <main class="container">
-            <div class="gallery-wrapper">
-                <div class="gallery">
-                    <img src="https://source.unsplash.com/random/500x500/?construction" alt="construction" class="item">
-                    <img src="https://source.unsplash.com/random/500x500/?nature" alt="nature" class="item">
-                    <img src="https://source.unsplash.com/random/500x500/?construction" alt="construction" class="item">
-                    <img src="https://source.unsplash.com/random/500x500/?nature" alt="nature" class="item">
-                    <button class="arrow-left control" aria-label="Previous image">⮜</button>
-                    <button class="arrow-right control" aria-label="Next image">⮞</button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMCOS Engenharia</title>
+    <link rel="icon" type="image/png" href="imgs/header/emcos-icon.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/slides.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" />
+</head>
+
+<body>
+    <header class="container-header">
+        <div class="nav-space"></div>
+        <nav class="nav">
+            <a href="#"><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="header__logo"></a>
+            <ul class="header__navlist">
+                <li class="header__navitem">
+                    <img src="imgs/header/nav-item-dec.png">
+                    <a href="#" class="header__navlink">Quem somos</a>
+                </li>
+                <li class="header__navitem">
+                    <img src="imgs/header/nav-item-dec.png">
+                    <a href="#" class="header__navlink">Projetos</a>
+                </li>
+                <li class="header__navitem">
+                    <img src="imgs/header/nav-item-dec.png">
+                    <a href="#" class="header__navlink">Contato</a>
+                </li>
+                <li class="header__navitem nav__button">
+                    <a href="#" class="header__navlink">Orçamento</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="slide-wrapper" data-slide="wrapper">
+            <!-- botões do carrossel -->
+            <button class="slide-nav-button slide-nav-previous fas fa-chevron-left"
+                data-slide="nav-previous-button"></button>
+            <button class="slide-nav-button slide-nav-next fas fa-chevron-right" data-slide="nav-next-button"></button>
+            <!-- box carrossel -->
+            <div class="slide-list" data-slide="list">
+                <!-- slides do carrossel -->
+                <div class="slide-item" data-slide="item" data-index="0">
+                    <div class="slide-content">
+                        <img class="slide-image" src="./imgs/slides/wheel-1.JPG" alt="">
+                        <div class="slide-description">
+                            <h3 class="description-title">Infraestrutura</h3>
+                            <p class="description-txt">Saiba mais</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="slide-item" data-slide="item" data-index="1">
+                    <div class="slide-content">
+                        <img class="slide-image" src="./imgs/slides/wheel-2.JPG" alt="">
+                        <div class="slide-description">
+                            <h3 class="description-title">Obras Industriais</h3>
+                            <p class="description-txt">Saiba mais</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-item" data-slide="item" data-index="2">
+                    <div class="slide-content">
+                        <img class="slide-image" src="./imgs/slides/wheel-3.jpg" alt="">
+                        <div class="slide-description">
+                            <h3 class="description-title">Obras Residenciais</h3>
+                            <p class="description-txt">Saiba mais</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- fim dos items do carrossel -->
             </div>
+            <!-- fim da box carrossel -->
+            <div class="slide-controls" data-slide="controls-wrapper">
+                <!-- botões "bolinhas" criados pelo JS -->
+            </div>
+        </div>
+    </div>
+    <script src="./js/slides.js"></script>
+    <script>
+        initSlider({
+            startAtIndex: 0,
+            autoPlay: true,
+            timeInterval: 7000
+        })
+    </script>
+    <main class="container-main">
+        <h1>Quem Somos</h1>
+    </main>
+</body>
 
-        </main>
-
-
-        <script src="main.js"></script>
-    </body>
 </html>
