@@ -1,3 +1,5 @@
+@import url('reset.css');
+
 :root {
     --wht-grad-bg: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 42.19%, #CBCBCB 75.52%);
     --grn-grad-bg: linear-gradient(180deg, #006B4C 9.89%, #00563B 54.95%, #003939 97.65%);
@@ -10,29 +12,26 @@
     --main-font: 'Montserrat';
 }
 
-html {
-    width: auto;
-}
-
 body {
     font-family: var(--main-font);
     background: var(--wht-grad-bg);
     width: auto;
+    height: 2000px;
 }
 
-.container-header {
+header {
     min-height: 90px;
     width: auto;
     margin-bottom: 0px;
 }
 
-.nav-space {
+.nav__wrapper {
     min-height: 90px;
     height: auto;
     width: 100%;
 }
 
-.nav {
+.nav__container {
     /* background */
     background-color: var(--clr-scheme-wht);
     /* dimensões */
@@ -54,16 +53,16 @@ body {
     top: 0;
 }
 
-.header__logo {
+.nav__logo {
     width: 194.83px;
     height: 50px;
 }
 
-.header__logo:hover {
+.nav__logo:hover {
     scale: 1.1;
 }
 
-.header__navlist {
+.nav__menu {
     /* alinhamento */
     display: flex;
     align-items: center;
@@ -80,16 +79,16 @@ body {
     height: 100%;
 }
 
-.header__navitem:hover {
+.nav__menu__item:hover {
     scale: 1.1;
 }
 
-.header__navitem {
+.nav__menu__item {
     white-space: nowrap;
 }
 
 
-.header__navitem a {
+.nav__menu__item a {
     /* posição */
     display: inline-block;
     /* alinhamento */
@@ -102,7 +101,7 @@ body {
     line-height: 24px;
 }
 
-.header__navitem img {
+.nav__menu__item img {
     height: 1em;
     margin-right: 0.3em;
 
@@ -115,8 +114,8 @@ body {
     margin-left: 1em;
 }
 
+/* estilo do carrossel está no slides.css */
+
 .container-main {
     margin-top: 20px;
 }
-
-

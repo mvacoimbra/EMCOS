@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMCOS Engenharia</title>
     <link rel="icon" type="image/png" href="imgs/header/emcos-icon.png" />
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/slides.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,24 +17,24 @@
 </head>
 
 <body>
-    <header class="container-header">
-        <div class="nav-space"></div>
-        <nav class="nav">
-            <a href="#"><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="header__logo"></a>
-            <ul class="header__navlist">
-                <li class="header__navitem">
+    <header>
+        <div class="nav__wrapper"></div>
+        <nav class="nav__container">
+            <a href="#"><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="nav__logo"></a>
+            <ul class="nav__menu">
+                <li class="nav__menu__item">
                     <img src="imgs/header/nav-item-dec.png">
                     <a href="#" class="header__navlink">Quem somos</a>
                 </li>
-                <li class="header__navitem">
+                <li class="nav__menu__item">
                     <img src="imgs/header/nav-item-dec.png">
                     <a href="#" class="header__navlink">Projetos</a>
                 </li>
-                <li class="header__navitem">
+                <li class="nav__menu__item">
                     <img src="imgs/header/nav-item-dec.png">
                     <a href="#" class="header__navlink">Contato</a>
                 </li>
-                <li class="header__navitem nav__button">
+                <li class="nav__menu__item nav__button">
                     <a href="#" class="header__navlink">Orçamento</a>
                 </li>
             </ul>
@@ -52,8 +51,7 @@
             <div class="slide-list" data-slide="list">
                 <!-- slides do carrossel -->
                 <div class="slide-item" data-slide="item" data-index="0">
-                    <div class="slide-content">
-                        <img class="slide-image" src="./imgs/slides/wheel-1.JPG" alt="">
+                    <div class="slide-content bg-slide-0">
                         <div class="slide-description">
                             <h3 class="description-title">Infraestrutura</h3>
                             <p class="description-txt">Saiba mais</p>
@@ -61,8 +59,7 @@
                     </div>
                 </div>
                 <div class="slide-item" data-slide="item" data-index="1">
-                    <div class="slide-content">
-                        <img class="slide-image" src="./imgs/slides/wheel-2.JPG" alt="">
+                    <div class="slide-content bg-slide-1">
                         <div class="slide-description">
                             <h3 class="description-title">Obras Industriais</h3>
                             <p class="description-txt">Saiba mais</p>
@@ -70,8 +67,7 @@
                     </div>
                 </div>
                 <div class="slide-item" data-slide="item" data-index="2">
-                    <div class="slide-content">
-                        <img class="slide-image" src="./imgs/slides/wheel-3.jpg" alt="">
+                    <div class="slide-content bg-slide-2">
                         <div class="slide-description">
                             <h3 class="description-title">Obras Residenciais</h3>
                             <p class="description-txt">Saiba mais</p>

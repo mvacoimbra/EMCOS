@@ -4,6 +4,7 @@
     /* alinhamento vertical */
     align-items: center;
     height: 80vh;
+    width: 100%;
 }
 
 /* o slide-wrapper é o elemento pai (caixa) do slide-list, dos botões de nav left e right e dos botões de controle inferiores (bolinhas) */
@@ -38,11 +39,31 @@
     /* posição relativa ao próprio elemento */
     position: relative;
     height: 100%;
+    background-color: black;
 }
 
-.slide-image {
-    width: 100%;
+.bg-slide-0 {
+    background-image: url('../imgs/slides/wheel-1.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+.bg-slide-1 {
+    background-image: url('../imgs/slides/wheel-2.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg-slide-2 {
+    background-image: url('../imgs/slides/wheel-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .slide-image {
+    width: 100%;
+} */
 
 .slide-description {
     /* posição absoluta, em relação ao elemento pai slide-content */
@@ -118,7 +139,7 @@ ex: buscaria um elemento com a classe .active dentro de um elemento que possui a
     scale: 1.5;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 869px) {
     .wrapper {
         height: 50vh;
     }
