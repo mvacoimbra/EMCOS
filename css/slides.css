@@ -1,9 +1,21 @@
+:root {
+    --wht-grad-bg: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 42.19%, #CBCBCB 75.52%);
+    --grn-grad-bg: linear-gradient(180deg, #006B4C 9.89%, #00563B 54.95%, #003939 97.65%);
+    --blck-grad-bg: linear-gradient(180deg, #221E1E 0%, #100A0C 100%);
+    --clr-scheme-grn: #205B2D;
+    --clr-scheme-blck: #100A0C;
+    --clr-scheme-drk-gry: #221E1E;
+    --clr-scheme-gry: #919397;
+    --clr-scheme-wht: #ffffff;
+    --main-font: 'Montserrat';
+}
+
 /* caixa que envolve todo o slide+botoes */
 .wrapper {
     display: flex;
     /* alinhamento vertical */
     align-items: center;
-    height: 80vh;
+    height: 88vh;
     width: 100%;
 }
 
@@ -43,47 +55,57 @@
 }
 
 .bg-slide-0 {
-    background-image: url('../imgs/slides/wheel-1.JPG');
+    /* IMAGEM INFRAESTRUTURA */
+    background-image: url('../imgs/slides/infra-01.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .bg-slide-1 {
-    background-image: url('../imgs/slides/wheel-2.JPG');
+    /* IMAGEM OBRAS IND. */
+    background-image: url('../imgs/slides/ind-01.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .bg-slide-2 {
-    background-image: url('../imgs/slides/wheel-3.jpg');
+    /* IMAGEM OBRAS RES. */
+    background-image: url('../imgs/slides/resi-01.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-/* .slide-image {
-    width: 100%;
-} */
-
 .slide-description {
     /* posição absoluta, em relação ao elemento pai slide-content */
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
     color: var(--clr-scheme-wht);
     width: 100%;
-    left: 200px;
-    bottom: 200px;
 }
 
 .description-title {
-    position: relative;
     font-weight: 600;
     font-size: 60px;
     margin-bottom: 20px;
 }
 
-.description-txt {
+/* botão Saiba Mais */
+.description-btn {
     font-weight: 600;
     font-size: 30px;
+    display: inline-flex;
+    column-gap: 10px;
+    text-decoration: none;
+    color: var(--clr-scheme-wht);
+}
+
+.description-btn:hover {
+    scale: 1.1;
+    transform: translateX(10px);
+    text-shadow: 0px 0px 10px #FFFFFF55;
 }
 
 /* botões esquerda/direita */
@@ -113,8 +135,12 @@
 
 /* caixa que engloba os botões bolinhas */
 .slide-controls {
-    margin: 0 auto 30px;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
     position: relative;
+    background: var(--blck-grad-bg);
 }
 
 /* bolinhas */
@@ -139,27 +165,22 @@ ex: buscaria um elemento com a classe .active dentro de um elemento que possui a
     scale: 1.5;
 }
 
-@media screen and (max-width: 869px) {
+/* resposividade para meia janela/tablets */
+@media screen and (max-width: 896px) {
     .wrapper {
         height: 50vh;
     }
 
     .slide-nav-button{
-        margin-top: -20px;
         font-size: 28px;
     }
 
     .slide-nav-previous {
-        left: 10px;
+        left: 50px;
     }
 
     .slide-nav-next {
-        right: 10px;
-    }
-    
-    .slide-description {
-        left: 100px;
-        bottom: 0px;
+        right: 50px;
     }
     
     .description-title {
@@ -170,13 +191,30 @@ ex: buscaria um elemento com a classe .active dentro de um elemento que possui a
         font-size: 15px;
     }
 
-    .slide-controls {
-        margin: 15px auto 0;
-    }
     .slide-control-button {
         font-size: 10px;
     }
 }
 
+/* responsividade para mobile */
+@media screen and (max-width: 420px) {
+    .wrapper {
+        height: 40vh;
+    }
 
+    .slide-nav-previous {
+        left: 50px;
+    }
+
+    .slide-nav-next {
+        right: 50px;
+    }
+
+    .slide-description {
+        top: 50%;
+        left: 50%;
+        transform: translate(-35%, -50%);
+    }
+    
+}
 
