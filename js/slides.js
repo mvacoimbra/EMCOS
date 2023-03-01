@@ -218,7 +218,7 @@ function setListeners() {
     navPreviousButton.addEventListener('click', previousSlide);
     slideList.addEventListener('transitionend', onSlideListTrasitionEnd);
     slideWrapper.addEventListener('mouseenter', function() {
-        clearInterval(slideInterval)
+        clearInterval(slideInterval);
         });
     slideWrapper.addEventListener('mouseleave', function() {
             setAutoPlay();
@@ -232,7 +232,7 @@ function setListeners() {
     })
 }
 
-function initSlider({startAtIndex, autoPlay = true, timeInterval = 3000}) {
+function initSlider({startAtIndex, autoPlay = true, timeInterval = 7000}) {
     state.autoPlay = autoPlay;
     state.timeInterval = timeInterval;
     createControlButtons();

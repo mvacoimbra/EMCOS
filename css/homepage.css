@@ -56,7 +56,6 @@ body {
   font-family: var(--main-font);
   background: var(--wht-grad-bg);
   width: auto;
-  height: 2000px;
   overflow-y: scroll;
 }
 
@@ -158,7 +157,36 @@ header {
 /* estilo do carrossel está no slides.css */
 
 .main__container {
-  margin-top: 20px;
+    overflow: hidden;
+    height: 100vh;
+    padding: 60px 0px;
+}
+
+.main__wrapper {
+    display: flex;
+    column-gap: 30px;
+}
+
+.main__img {
+    width: 657px;
+    height: 510px;
+}
+
+.main__content {
+    padding-right: 100px;
+    text-align: left;
+}
+
+.content__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--clr-scheme-blck);
+}
+
+.content__text {
+    /* tabulação */
+    text-indent: 2em;
 }
 
 @media screen and (max-width: 896px) {
