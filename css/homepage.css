@@ -46,25 +46,31 @@
 
 /* SELEÇÃO */
 ::selection {
-    color: var(--clr-scheme-wht);
-    background: rgba(32, 91, 45, 0.5);
-    /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 0px 0px 10px #FFFFFF55;
-  }
+  color: var(--clr-scheme-wht);
+  background: rgba(32, 91, 45, 0.5);
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: 0px 0px 10px #ffffff55;
+}
+
+html {
+  max-width: 1920px;
+}
 
 body {
   font-family: var(--main-font);
   background: var(--wht-grad-bg);
-  width: auto;
+  width: 100%;
   overflow-y: scroll;
 }
 
 header {
   min-height: 90px;
-  width: auto;
+  width: 100%;
+  max-width: 1920px;
   margin-bottom: 0px;
 }
 
+/* BARRA DE NAVEGAÇÃO ---------------------------------------------------------------------- */
 .nav__wrapper {
   /* min-height: 90px; */
   height: auto;
@@ -78,6 +84,7 @@ header {
   min-height: 90px;
   height: auto;
   width: 100%;
+  max-width: 1920px;
   /* alinhamentos */
   display: grid;
   grid-template-columns: 30% 70%;
@@ -154,40 +161,118 @@ header {
   padding: 0.2em 1em;
 }
 
-/* estilo do carrossel está no slides.css */
+/* CARROSSEL (estilo do carrossel está no slides.css) ----------------------------------------------------------------------*/
 
+/*  QUEM SOMOS ----------------------------------------------------------------------*/
 .main__container {
-    overflow: hidden;
-    height: 100vh;
-    padding: 100px 0px;
+  overflow: hidden;
+  height: 90vh;
+  max-height: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 .main__wrapper {
-    display: flex;
-    column-gap: 30px;
+  display: flex;
+  align-content: center;
+  column-gap: 30px;
+  
 }
 
 .main__img {
-    width: 657px;
-    height: 510px;
+  width: 657px;
+  height: 510px;
 }
 
 .main__content {
-    padding-right: 100px;
-    text-align: left;
+  padding-right: 100px;
+  text-align: left;
 }
 
 .content__title {
-    text-align: center;
-    font-weight: 600;
-    font-size: 60px;
-    color: var(--clr-scheme-blck);
+  text-align: center;
+  font-weight: 600;
+  font-size: 60px;
+  color: var(--clr-scheme-blck);
+  margin-bottom: 20px;
 }
 
 .content__text {
-    /* tabulação */
-    text-indent: 2em;
+  /* tabulação */
+  text-indent: 2em;
+  color: var(--clr-scheme-drk-gry);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.3em;
+  margin-bottom: 0.5em;
 }
+
+.content__text em {
+  color: var(--clr-scheme-grn);
+  font-weight: 500;
+}
+
+/* MISSÃO, VISÃO, VALORES ----------------------------------------------------------------------*/
+
+.mvv__container {
+  margin-top: 0px;
+  height: 80vh;
+  max-height: 1080px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.mvv__wrapper {
+  height: 100%;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.circle {
+  width: 350px;
+  height: 350px;
+  background: var(--clr-scheme-blck);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--clr-scheme-wht);
+}
+
+.circle h2 {
+  font-weight: 600;
+  font-size: 55px;
+  margin-bottom: 50px;
+}
+
+.circle p, .circle ul {
+  font-weight: 500;
+  font-size: 25px;
+  text-align: justify;
+  padding: 0 40px;
+}
+
+.circle.values ul {
+  text-align: center;
+}
+
+.circle.vision {
+  width: 500px;
+  height: 500px;
+}
+
+/* FLUXO ADM ----------------------------------------------------------------------*/
+
 
 @media screen and (max-width: 896px) {
   header {

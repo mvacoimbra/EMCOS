@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!-- BARRA DE NAVEGAÇÃO -->
     <header>
         <div class="nav__wrapper"></div>
         <nav class="nav__container">
@@ -24,7 +25,7 @@
             <ul class="nav__menu">
                 <li class="nav__menu__item">
                     <img src="imgs/header/nav-item-dec.png">
-                    <a href="#" class="header__navlink">Quem somos</a>
+                    <a href="#about" class="header__navlink">Quem somos</a>
                 </li>
                 <li class="nav__menu__item">
                     <img src="imgs/header/nav-item-dec.png">
@@ -40,7 +41,7 @@
             </ul>
         </nav>
     </header>
-
+    <!-- CARROSSEL -->
     <div class="wrapper">
         <div class="slide-wrapper" data-slide="wrapper">
             <!-- botões do carrossel -->
@@ -86,12 +87,13 @@
                 <!-- fim dos items do carrossel -->
             </div>
             <!-- fim da box carrossel -->
-            <div class="slide-controls" data-slide="controls-wrapper">
+            <div class="slide-controls" data-slide="controls-wrapper" id="about">
                 <!-- botões "bolinhas" criados pelo JS -->
             </div>
         </div>
     </div>
     <script src="./js/slides.js"></script>
+    <!-- CONTROLES CARROSSEL -->
     <script>
         initSlider({
             startAtIndex: 0,
@@ -99,13 +101,15 @@
             timeInterval: 7000
         })
     </script>
+
+    <!-- QUEM SOMOS -->
     <main class="main__container">
         <div class="main__wrapper">
             <img src="./imgs/about/aboutPhoto.png" alt="Uma foto de um girassol com a logo da empresa em segundo plano" class="main__img">
             <div class="main__content">
                 <h1 class="content__title">Quem Somos</h1>
                 <p class="content__text">
-                    Nascida em dezembro de 2017, a EMCOS engenharia veio ao mundo com o objetivo de oferecer ao mercado um novo conceito de engenharia: mais jovem, inovador e leal.
+                    Nascida em dezembro de 2017, a EMCOS engenharia veio ao mundo com o objetivo de oferecer ao mercado um novo conceito de engenharia mais: <em>jovem</em>, <em>inovador</em> e <em>leal</em>.
                 </p>
                 <p class="content__text">
                     Buscamos construir em cada projeto, muito além de estruturas de concreto e aço. Edificamos relações de confiança, parceria e profissionalismo com nossos clientes.
@@ -119,6 +123,34 @@
             </div>
         </div>
     </main>
+
+    <!-- MISSÃO VISÃO VALORES -->
+    <section class="mvv__container">
+        <div class="mvv__wrapper">
+            <div class="circle mission">
+                <h2>Missão</h2>
+                <p>Ser Referência na engenharia pela responsabilidade e ética.</p>
+            </div>
+            <div class="circle vision">
+                <h2>Visão</h2>
+                <p>Atingir uma proporção de atuação nacional, com uma equipe flexível para atender os mais variados projetos e clientes na prestação de nossos serviços.</p>
+            </div>
+            <div class="circle values">
+                <h2>Valores</h2>
+                <ul>
+                    <li>Transparência;</li>
+                    <li>Segurança;</li>
+                    <li>Inovação;</li>
+                    <li>Sustentabilidade.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrkflw__container">
+        
+    </section>
+
 </body>
 
 </html>
