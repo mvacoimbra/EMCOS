@@ -420,6 +420,7 @@ header {
 
   /* QUEM SOMOS ------------------------------------------------------- */
   .main__container {
+    margin-top: 5px;
     height: 60vh;
   }
 
