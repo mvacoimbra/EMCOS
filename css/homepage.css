@@ -163,7 +163,7 @@ header {
 
 /* CARROSSEL (estilo do carrossel está no slides.css) ----------------------------------------------------------------------*/
 
-/*  QUEM SOMOS ----------------------------------------------------------------------*/
+/* QUEM SOMOS ----------------------------------------------------------------------*/
 .main__container {
   overflow: hidden;
   height: 90vh;
@@ -271,15 +271,44 @@ header {
   height: 500px;
 }
 
+.leftTrans--scroll {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+}
+
+.centerTrans--scroll {
+  opacity: 0;
+  transition: all 0.4s ease-out;
+  transition-delay: 0.4s;
+}
+
+.rightTrans--scroll {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+}
+
+.upNdwn__restart--scroll {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* FLUXO ADM ----------------------------------------------------------------------*/
 
 .wrkflw__container {
   height: 2000px;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .wrkflw__wrapper {
   padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .wrkflw__title {
@@ -291,14 +320,17 @@ header {
 }
 
 .wrkflw__list {
+  display: flex;
+  flex-direction: column;
 }
 
-.wrkflw__lstItem {
-}
+/* .wrkflw__lstItem {
+} */
 
 .wrkflw__btnWrapper {
   display: flex;
   column-gap: 10px;
+  margin-bottom: 30px;
 }
 
 .wrkflw__btn {
@@ -319,13 +351,17 @@ header {
   color: var(--clr-scheme-blck);
 }
 
+.wrkflw__btnTitle--active {
+  color: var(--clr-scheme-grn);
+}
+
 .wrkflw__btnTitle em {
   color: var(--clr-scheme-grn);
 }
 
 .wrkflw__btnDesc {
-  margin-left: 60px;
-  padding: 0 0 10px 60px ;
+  margin: -30px 0px 30px 60px;
+  padding: 0 0 20px 60px;
   border-left: var(--clr-scheme-grn) solid 4px;
   border-bottom: var(--clr-scheme-grn) solid 4px;
   border-bottom-left-radius: 60px;
@@ -335,6 +371,10 @@ header {
   color: var(--clr-scheme-drk-gry);
   text-align: justify;
 }
+
+/* .wrkflw__btnDesc--hide {
+  display: none;
+} */
 
 @media screen and (max-width: 896px) {
   header {
@@ -363,5 +403,103 @@ header {
 
   .nav__button {
     padding: 0.1em 0.5em;
+  }
+}
+
+/* responsividade para mobile */
+@media screen and (max-width: 450px) {
+  /* BARRA DE NAVEGAÇÃO ------------------------------------------------------- */
+  .nav__container {
+    grid-template-columns: 50% 50%;
+    padding: 0;
+  }
+
+  .nav__menu__item {
+    display: none;
+  }
+
+  /* QUEM SOMOS ------------------------------------------------------- */
+  .main__container {
+    height: 60vh;
+  }
+
+  .main__wrapper {
+    padding: 0;
+  }
+
+  .main__img {
+    display: none;
+  }
+
+  .main__content {
+    padding: 30px;
+  }
+
+  .content__title {
+    font-size: 25px;
+  }
+
+  .content__text {
+    font-size: 16px;
+  }
+
+  /* M V V ------------------------------------------------------- */
+  .mvv__container {
+    height: 100%;
+    background: var(--clr-scheme-drk-gry);
+  }
+  
+  .mvv__wrapper {
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  
+  .circle {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .circle h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .circle p,
+  .circle ul {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  .circle.values ul {
+    text-align: center;
+  }
+  
+  .circle.vision {
+    width: 100%;
+    height: auto;
+  }
+
+  .leftTrans--scroll, .rightTrans--scroll, .centerTrans--scroll {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+  }
+
+  .upNdwn__restart--scroll {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .wrkflw__container {
+    display: none;
   }
 }
