@@ -178,7 +178,6 @@ header {
   display: flex;
   align-content: center;
   column-gap: 30px;
-  
 }
 
 .main__img {
@@ -255,7 +254,8 @@ header {
   margin-bottom: 50px;
 }
 
-.circle p, .circle ul {
+.circle p,
+.circle ul {
   font-weight: 500;
   font-size: 25px;
   text-align: justify;
@@ -273,6 +273,68 @@ header {
 
 /* FLUXO ADM ----------------------------------------------------------------------*/
 
+.wrkflw__container {
+  height: 2000px;
+  max-width: 100%;
+}
+
+.wrkflw__wrapper {
+  padding: 0 100px;
+}
+
+.wrkflw__title {
+  font-weight: 600;
+  font-size: 60px;
+  color: var(--clr-scheme-blck);
+  text-align: center;
+  margin: 50px 0;
+}
+
+.wrkflw__list {
+}
+
+.wrkflw__lstItem {
+}
+
+.wrkflw__btnWrapper {
+  display: flex;
+  column-gap: 10px;
+}
+
+.wrkflw__btn {
+  background: transparent;
+  width: 120px;
+  height: 120px;
+  border: var(--clr-scheme-grn) solid 4px;
+  border-radius: 50%;
+  color: var(--clr-scheme-grn);
+  font-size: 60px;
+}
+
+.wrkflw__btnTitle {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--clr-scheme-blck);
+}
+
+.wrkflw__btnTitle em {
+  color: var(--clr-scheme-grn);
+}
+
+.wrkflw__btnDesc {
+  margin-left: 60px;
+  padding: 0 0 10px 60px ;
+  border-left: var(--clr-scheme-grn) solid 4px;
+  border-bottom: var(--clr-scheme-grn) solid 4px;
+  border-bottom-left-radius: 60px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.2em;
+  color: var(--clr-scheme-drk-gry);
+  text-align: justify;
+}
 
 @media screen and (max-width: 896px) {
   header {
