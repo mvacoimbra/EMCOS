@@ -329,8 +329,14 @@ header {
 
 .wrkflw__btnWrapper {
   display: flex;
-  column-gap: 10px;
+  column-gap: 30px;
   margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.wrkflw__btnWrapper:hover {
+  scale: 1.01;
+  transform: translateX(6px);
 }
 
 .wrkflw__btn {
@@ -341,6 +347,7 @@ header {
   border-radius: 50%;
   color: var(--clr-scheme-grn);
   font-size: 60px;
+  cursor: pointer;
 }
 
 .wrkflw__btnTitle {
@@ -349,6 +356,7 @@ header {
   font-weight: 700;
   font-size: 40px;
   color: var(--clr-scheme-blck);
+  cursor: pointer;
 }
 
 .wrkflw__btnTitle--active {
@@ -372,9 +380,9 @@ header {
   text-align: justify;
 }
 
-/* .wrkflw__btnDesc--hide {
+.wrkflw__btnDesc--hide {
   display: none;
-} */
+}
 
 @media screen and (max-width: 896px) {
   header {
