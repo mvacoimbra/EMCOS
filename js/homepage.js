@@ -8,7 +8,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("upNdwn__restart--scroll");
-        console.log(entry.target.classList);
+        // console.log(entry.target.classList);
       }
       // else {
       //     entry.target.classList.remove('upNdwn__restart--scroll');
@@ -31,15 +31,21 @@ for (let i = 0; i < animation_elements.length; i++) {
 
 const wrkFlwBtn = document.querySelectorAll('[data-wrkflw="button"]');
 const wrkFlwBtnDesc = document.querySelectorAll('[data-wrkflw="desc"]');
+const wrkFlwBtnIcon = document.querySelectorAll('[data-wrkflw="btnIcon"]');
 
 for (let i = 0; i < wrkFlwBtn.length; i++) {
     wrkFlwBtn[i].addEventListener('click', () => {
         if (wrkFlwBtnDesc[i].classList.contains('wrkflw__btnDesc--hide')) {
-            wrkFlwBtnDesc[i].classList.remove('wrkflw__btnDesc--hide')
+            wrkFlwBtnDesc[i].classList.remove('wrkflw__btnDesc--hide');
+            wrkFlwBtnIcon[i].classList.add('wrkflw__btn--active');
         } else {
-            wrkFlwBtnDesc[i].classList.add('wrkflw__btnDesc--hide')
+            wrkFlwBtnDesc[i].classList.add('wrkflw__btnDesc--hide');
+            wrkFlwBtnIcon[i].classList.remove('wrkflw__btn--active');
         }
     });
 }
 
-
+// SCREEN TOP FORCED
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}

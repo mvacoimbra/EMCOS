@@ -108,6 +108,10 @@ header {
   scale: 1.1;
 }
 
+.menu__wrapper {
+  height: 100%;
+}
+
 .nav__menu {
   /* alinhamento */
   display: flex;
@@ -160,6 +164,8 @@ header {
   border-radius: 20px;
   padding: 0.2em 1em;
 }
+
+/* botão mobile */
 
 /* CARROSSEL (estilo do carrossel está no slides.css) ----------------------------------------------------------------------*/
 
@@ -299,9 +305,10 @@ header {
 /* FLUXO ADM ----------------------------------------------------------------------*/
 
 .wrkflw__container {
-  height: 2000px;
+  height: auto;
   max-width: 100%;
   overflow: hidden;
+  margin-top: 30px;
 }
 
 .wrkflw__wrapper {
@@ -316,7 +323,7 @@ header {
   font-size: 60px;
   color: var(--clr-scheme-blck);
   text-align: center;
-  margin: 50px 0;
+  margin: 0 0 50px;
 }
 
 .wrkflw__list {
@@ -359,12 +366,13 @@ header {
   cursor: pointer;
 }
 
-.wrkflw__btnTitle--active {
+.wrkflw__btnTitle em {
   color: var(--clr-scheme-grn);
 }
 
-.wrkflw__btnTitle em {
-  color: var(--clr-scheme-grn);
+.wrkflw__btn--active {
+  text-shadow: 0px 0px 20px var(--clr-scheme-wht);
+  box-shadow: 0 0 20px #00000099;
 }
 
 .wrkflw__btnDesc {
@@ -383,6 +391,8 @@ header {
 .wrkflw__btnDesc--hide {
   display: none;
 }
+
+/* ---------------------------------------------------------------- */
 
 @media screen and (max-width: 896px) {
   header {
@@ -414,6 +424,8 @@ header {
   }
 }
 
+/* ------------------------------------------------------------------- */
+
 /* responsividade para mobile */
 @media screen and (max-width: 450px) {
   /* BARRA DE NAVEGAÇÃO ------------------------------------------------------- */
@@ -422,14 +434,20 @@ header {
     padding: 0;
   }
 
+  .nav__menu {
+    background: none;
+    display: none;
+  }
+
   .nav__menu__item {
     display: none;
   }
 
   /* QUEM SOMOS ------------------------------------------------------- */
   .main__container {
-    margin-top: 5px;
     height: 70vh;
+    padding: 0;
+    margin: 0;
   }
 
   .main__wrapper {
@@ -441,7 +459,8 @@ header {
   }
 
   .main__content {
-    padding: 30px;
+    padding: 0 30px;
+    margin: 0;
   }
 
   .content__title {
@@ -457,7 +476,7 @@ header {
     height: 100%;
     background: var(--clr-scheme-drk-gry);
   }
-  
+
   .mvv__wrapper {
     height: 100%;
     padding: 0px;
@@ -465,7 +484,7 @@ header {
     flex-direction: column;
     row-gap: 5px;
   }
-  
+
   .circle {
     width: 100%;
     height: auto;
@@ -474,29 +493,31 @@ header {
     display: flex;
     flex-direction: column;
   }
-  
+
   .circle h2 {
     font-size: 20px;
     margin-bottom: 10px;
   }
-  
+
   .circle p,
   .circle ul {
     font-size: 16px;
     text-align: center;
     padding: 0 15px;
   }
-  
+
   .circle.values ul {
     text-align: center;
   }
-  
+
   .circle.vision {
     width: 100%;
     height: auto;
   }
 
-  .leftTrans--scroll, .rightTrans--scroll, .centerTrans--scroll {
+  .leftTrans--scroll,
+  .rightTrans--scroll,
+  .centerTrans--scroll {
     opacity: 0;
     transform: translateX(-200px);
     transition: all 0.4s ease-out;
@@ -508,7 +529,56 @@ header {
     transform: translateX(0);
   }
 
-  .wrkflw__container {
-    display: none;
+  /* WORKFLOW ------------------------------------------------------- */
+  /* .wrkflw__container {
+    max-width: 100%;
+    overflow: hidden;
+  } */
+
+  .wrkflw__wrapper {
+    padding: 0 10px;
+  }
+
+  .wrkflw__title {
+    font-size: 25px;
+    margin: 0 0 20px;
+  }
+
+  .wrkflw__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrkflw__btnWrapper {
+    display: flex;
+    column-gap: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  .wrkflw__btnWrapper:hover {
+    scale: 1;
+    transform: translateX(0px);
+  }
+
+  .wrkflw__btn {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 30px;
+  }
+
+  .wrkflw__btnTitle {
+    font-size: 20px;
+    flex-wrap: nowrap;
+    margin: 0 5px;
+  }
+
+  .wrkflw__btnDesc {
+    margin: -10px 0 0 29.5px;
+    padding: 0px 10px 20px 10px;
+    border-bottom-left-radius: 60px;
+    font-size: 16px;
   }
 }
