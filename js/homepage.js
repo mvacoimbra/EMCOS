@@ -49,3 +49,22 @@ for (let i = 0; i < wrkFlwBtn.length; i++) {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
+
+// DARK THEME
+let drkBtn = document.querySelector('[data-theme="btn"]');
+let drkLogo = document.querySelector('[data-theme="logo"]')
+
+drkBtn.addEventListener('click', ()=> {
+  document.body.classList.toggle('darkTheme')
+  if(document.body.classList.contains("darkTheme")) {
+    drkLogo.src = "imgs/header/emcos-logo-white.png";
+    drkBtn.classList.remove("fa-moon");
+    drkBtn.classList.add("fa-sun");
+    
+  } else {
+    drkLogo.src = "imgs/header/emcos-logo.png"
+    drkBtn.classList.remove("fa-sun");
+    drkBtn.classList.add("fa-moon");
+  }
+});
+
