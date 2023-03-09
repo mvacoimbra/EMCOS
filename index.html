@@ -21,16 +21,16 @@
     <header>
         <div class="nav__wrapper"></div>
         <nav class="nav__container">
-            <a href="#"><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="nav__logo" data-theme="logo"></a>
+            <a><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="nav__logo" data-theme="logo" data-scrollCrtl="topBtn"></a>
             <div class="menu__wrapper">
                 <ul class="nav__menu">
                     <li class="nav__menu__item">
                         <img src="imgs/header/nav-item-dec.png">
-                        <a href="#about" class="header__navlink">Quem somos</a>
+                        <a class="header__navlink" data-scrollCrtl="aboutBtn">Quem somos</a>
                     </li>
                     <li class="nav__menu__item">
                         <img src="imgs/header/nav-item-dec.png">
-                        <a href="#" class="header__navlink">Projetos</a>
+                        <a class="header__navlink" data-scrollCrtl="projectsBtn">Projetos</a>
                     </li>
                     <li class="nav__menu__item">
                         <img src="imgs/header/nav-item-dec.png">
@@ -108,7 +108,7 @@
     </script>
 
     <!-- QUEM SOMOS -->
-    <main class="main__container">
+    <main class="main__container" data-scrollCrtl="aboutSrcl">
         <div class="main__wrapper">
             <img src="./imgs/about/aboutPhoto.png" alt="Uma foto de um girassol com a logo da empresa em segundo plano"
                 class="main__img leftTrans--scroll" data-scrollAni="upNdwn">
@@ -136,7 +136,7 @@
     </main>
 
     <!-- MISSÃO VISÃO VALORES -->
-    <section class="mvv__container">
+    <section class="mvv__container" data-scrollCrtl="mvvScrl">
         <div class="mvv__wrapper">
             <div class="circle mission leftTrans--scroll" data-scrollAni="upNdwn">
                 <h2>Missão</h2>
@@ -160,7 +160,7 @@
     </section>
 
     <!-- FLUXO DE TRABALHO -->
-    <section class="wrkflw__container">
+    <section class="wrkflw__container" data-scrollCrtl="wrkflwScrl">
         <div class="wrkflw__wrapper">
             <h1 class="wrkflw__title">Como funciona o nosso fluxo de trabalho:</h1>
 
@@ -178,7 +178,11 @@
                     <!-- DESCRIÇÃO -->
                     <div class="wrkflw__btnDesc wrkflw__btnDesc--hide" data-wrkflw="desc">
                         <p>
-                            A análise de viabilidade é a primeira etapa da administração de obra, nesta, é realizado um estudo primário sobre todos os custos que envolvem o projeto, afim de avaliar a viabilidade da administração. Além disso, nessa etapa, executa-se um levantamento de equipes e materiais necessários para a execução, levando em conta licenças, normas, legislações e quaisquer outros fatores.
+                            A análise de viabilidade é a primeira etapa da administração de obra, nesta, é realizado um
+                            estudo primário sobre todos os custos que envolvem o projeto, afim de avaliar a viabilidade
+                            da administração. Além disso, nessa etapa, executa-se um levantamento de equipes e materiais
+                            necessários para a execução, levando em conta licenças, normas, legislações e quaisquer
+                            outros fatores.
                         </p>
                     </div>
                 </li>
@@ -195,7 +199,9 @@
                     <!-- DESCRIÇÃO -->
                     <div class="wrkflw__btnDesc wrkflw__btnDesc--hide" data-wrkflw="desc">
                         <p>
-                            Após definida a viabilidade, é necessário um apuramento de todos os custos, para que seja elaborada uma proposta com valores reais e atualizados. Cada serviço e compra necessária para a execução será contabilizado neste momento, gerando assim um orçamento detalhado.
+                            Após definida a viabilidade, é necessário um apuramento de todos os custos, para que seja
+                            elaborada uma proposta com valores reais e atualizados. Cada serviço e compra necessária
+                            para a execução será contabilizado neste momento, gerando assim um orçamento detalhado.
                         </p>
                     </div>
                 </li>
@@ -212,7 +218,10 @@
                     <!-- DESCRIÇÃO -->
                     <div class="wrkflw__btnDesc wrkflw__btnDesc--hide" data-wrkflw="desc">
                         <p>
-                            Com a proposta aprovada, inicia-se a elaboração de estudos e projetos de execução compatibilizados. Com estes, pode-se criar um plano de ação e um cronograma detalhado, organizado de maneira assertiva quanto ao tempo necessário para conclusão de cada serviço, prazos de entrega de materiais, e o custo de cada etapa.
+                            Com a proposta aprovada, inicia-se a elaboração de estudos e projetos de execução
+                            compatibilizados. Com estes, pode-se criar um plano de ação e um cronograma detalhado,
+                            organizado de maneira assertiva quanto ao tempo necessário para conclusão de cada serviço,
+                            prazos de entrega de materiais, e o custo de cada etapa.
                         </p>
                     </div>
                 </li>
@@ -229,7 +238,10 @@
                     <!-- DESCRIÇÃO -->
                     <div class="wrkflw__btnDesc wrkflw__btnDesc--hide" data-wrkflw="desc">
                         <p>
-                            Antes do início da execução do projeto é necessário que sejam definidos os locais para a estrutura da obra como: alojamentos, banheiros, almoxarifado e etc. Nessa etapa é fundamental implantação do uso de EPI’s e EPC’s, a correta sinalização da obra e realização de DDS’s, evitando acidentes e prejuízos. A palavra-chave dessa etapa é segurança.
+                            Antes do início da execução do projeto é necessário que sejam definidos os locais para a
+                            estrutura da obra como: alojamentos, banheiros, almoxarifado e etc. Nessa etapa é
+                            fundamental implantação do uso de EPI’s e EPC’s, a correta sinalização da obra e realização
+                            de DDS’s, evitando acidentes e prejuízos. A palavra-chave dessa etapa é segurança.
                         </p>
                     </div>
                 </li>
@@ -246,8 +258,12 @@
                     <!-- DESCRIÇÃO -->
                     <div class="wrkflw__btnDesc wrkflw__btnDesc--hide" data-wrkflw="desc">
                         <p>
-                            Durante a execução do plano de ação é empregada uma rotina de fiscalização das atividades. Com o acesso a todos os documentos e informações do projeto, a gestão sabe exatamente o nível de criticidade de cada tarefa, mantendo assim, um controle de qualidade elevado.
-	                        São fornecidos relatórios para documentar o processo de acompanhamento diário de tarefas, a fim de previnir ou identificar erros e solucioná-los em tempo hábil, preservando o cronograma estabelecido.
+                            Durante a execução do plano de ação é empregada uma rotina de fiscalização das atividades.
+                            Com o acesso a todos os documentos e informações do projeto, a gestão sabe exatamente o
+                            nível de criticidade de cada tarefa, mantendo assim, um controle de qualidade elevado.
+                            São fornecidos relatórios para documentar o processo de acompanhamento diário de tarefas, a
+                            fim de previnir ou identificar erros e solucioná-los em tempo hábil, preservando o
+                            cronograma estabelecido.
                         </p>
                     </div>
                 </li>
@@ -264,7 +280,10 @@
                     <!-- DESCRIÇÃO -->
                     <div class="wrkflw__btnDesc wrkflw__btnDesc--hide" data-wrkflw="desc">
                         <p>
-                            É essencial garantir que as equipes de execução estejam munidas de todas as informações que precisem, atualizadas em tempo real. A administração deve assegurar que as deliberações sobre o projeto sejam comunicadas de forma clara e objetiva, evitando o desgaste da equipe operacional.
+                            É essencial garantir que as equipes de execução estejam munidas de todas as informações que
+                            precisem, atualizadas em tempo real. A administração deve assegurar que as deliberações
+                            sobre o projeto sejam comunicadas de forma clara e objetiva, evitando o desgaste da equipe
+                            operacional.
                         </p>
                     </div>
                 </li>
@@ -281,8 +300,11 @@
                     <!-- DESCRIÇÃO -->
                     <div class="wrkflw__btnDesc wrkflw__btnDesc--hide" data-wrkflw="desc">
                         <p>
-                            É indispensável um controle, para acompanhar a compra, entrega, armazenagem, e consumo dos materiais necessários para a execução do projeto. Além disso, a demanda de material deve ser verificada diariamente, evitando ociosidade no canteiro devido à falta de materiais.
-                            Esses materiais devem ser armazenados e separados corretamente, evitando perdas e desperdícios. O uso de aplicativos de gerenciamento de obras auxilia nesse quesito.
+                            É indispensável um controle, para acompanhar a compra, entrega, armazenagem, e consumo dos
+                            materiais necessários para a execução do projeto. Além disso, a demanda de material deve ser
+                            verificada diariamente, evitando ociosidade no canteiro devido à falta de materiais.
+                            Esses materiais devem ser armazenados e separados corretamente, evitando perdas e
+                            desperdícios. O uso de aplicativos de gerenciamento de obras auxilia nesse quesito.
                         </p>
                     </div>
                 </li>
@@ -291,8 +313,19 @@
     </section>
 
     <!-- PROJETOS -->
-    <section class="projects__container">
-
+    <section class="projects__container" data-scrollCrtl="projectSrcl">
+        <h1 class="projects__title">Projetos</h1>
+        <div class="projects__menu">
+            <a href="#" class="projects__item projects__item--1">
+                <h3 class="item__title">Infraestrutura</h3>
+            </a>
+            <a href="#" class="projects__item projects__item--2">
+                <h3 class="item__title">Obras Industriais</h3>
+            </a>
+            <a href="#" class="projects__item projects__item--3">
+                <h3 class="item__title">Obras Residenciais</h3>
+            </a>
+        </div>
     </section>
 
     <script src="./js/homepage.js"></script>
