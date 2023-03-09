@@ -45,10 +45,10 @@ for (let i = 0; i < wrkFlwBtn.length; i++) {
     });
 }
 
-// // SCREEN TOP FORCED
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// }
+// SCREEN TOP FORCED
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 // DARK THEME
 let drkBtn = document.querySelector('[data-theme="btn"]');
