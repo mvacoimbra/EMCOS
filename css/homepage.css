@@ -424,9 +424,8 @@ header {
   transition: all 1s;
 }
 
-/* PROJETOS */
+/* PROJETOS ----------------------------------------------------------------------*/
 .projects__container {
-  position: relative;
   margin-top: 50px;
   overflow: hidden;
   max-height: 1080px;
@@ -474,25 +473,268 @@ header {
 }
 
 .projects__item--1 {
-  background: url('../imgs/projects/pjctsPh1.png');
+  background: url('../imgs/projects/pjctsPh1-2k.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 1px;
 }
 
 .projects__item--2 {
-  background: url('../imgs/projects/pjctsPh2.png');
+  background: url('../imgs/projects/pjctsPh2-2k.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 1px;
 }
 
 .projects__item--3 {
-  background: url('../imgs/projects/pjctsPh3.png');
+  background: url('../imgs/projects/pjctsPh3-2k.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 1px;
 }
+
+/* CLIENTES ----------------------------------------------------------------------*/
+.clients__container {
+  margin-top: 50px;
+  overflow: hidden;
+  max-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+}
+
+.clients__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 60px;
+  color: var(--clr-scheme-grn);
+  margin-bottom: 50px;
+}
+
+.logos__wrapper {
+  display: flex;
+  column-gap: 15px;
+  row-gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.logo__box {
+  width: 320px;
+  height: 200px;
+  padding: 25px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__box:hover {
+  scale: 1.05;
+}
+
+.clients__logo--1 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-ambev-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--1:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-ambev.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--2 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-brainfarma-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--2:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-brainfarma.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--3 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-canoa-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--3:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-canoa.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--4 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-crown-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--4:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-crown.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--5 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-ecorodovias-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--5:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-ecorodovias.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--6 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-equiplex-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--6:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-equiplex.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--7 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-faberprint-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--7:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-faberprint.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--8 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-fresenius-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--8:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-fresenius.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--9 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-isoeste-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--9:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-isoeste.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--10 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-nacgas-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--10:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-nacgas.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--11 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-portoseco-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--11:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-portoseco.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--12 {
+  background: no-repeat center url('../imgs/clients/logos-no-clr/logo-triunfo-noclr.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+.clients__logo--12:hover {
+  background: no-repeat center url('../imgs/clients/logos-clr/logo-triunfo.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in;
+}
+
+/* FOOTER */
+.footer__container{
+  margin-top: 50px;
+  overflow: hidden;
+  max-height: 1080px;
+  display: flex;
+  padding: 0 100px;
+  background: var(--grn-grad-bg);
+}
+
 
 
 /* ---------------------------------------------------------------- */
