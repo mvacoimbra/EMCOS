@@ -51,29 +51,32 @@ window.onbeforeunload = function () {
 }
 
 // DARK THEME
-let drkBtn = document.querySelector('[data-theme="btn"]');
-let drkLogo = document.querySelector('[data-theme="logo"]')
+let drkBtn = document.querySelectorAll('[data-theme="btn"]');
+let drkLogo = document.querySelector('[data-theme="logo"]');
 
-drkBtn.addEventListener('click', ()=> {
-  document.body.classList.toggle('darkTheme')
-  if(document.body.classList.contains("darkTheme")) {
-    drkLogo.src = "imgs/header/emcos-logo-white.png";
-    drkBtn.classList.remove("fa-moon");
-    drkBtn.classList.add("fa-sun");
-    
-  } else {
-    drkLogo.src = "imgs/header/emcos-logo.png"
-    drkBtn.classList.remove("fa-sun");
-    drkBtn.classList.add("fa-moon");
-  }
-});
+for (let i = 0; i < drkBtn.length; i++) {
+  drkBtn[i].addEventListener('click', ()=> {
+    document.body.classList.toggle('darkTheme')
+    if(document.body.classList.contains("darkTheme")) {
+      drkLogo.src = "imgs/header/emcos-logo-white.png";
+      drkBtn[i].classList.remove("fa-moon");
+      drkBtn[i].classList.add("fa-sun");
+      
+    } else {
+      drkLogo.src = "imgs/header/emcos-logo.png"
+      drkBtn[i].classList.remove("fa-sun");
+      drkBtn[i].classList.add("fa-moon");
+    }
+  });
+}
 
 // SCROLL CONTROL
-
-let aboutBtn = document.querySelector('[data-scrollCrtl="aboutBtn"]');
-let projectsBtn = document.querySelector('[data-scrollCrtl="projectsBtn"]');
+let aboutBtn = document.querySelectorAll('[data-scrollCrtl="aboutBtn"]');
+let projectsBtn = document.querySelectorAll('[data-scrollCrtl="projectsBtn"]');
 let topBtn = document.querySelector('[data-scrollCrtl="topBtn"]')
 
+let navAnchor = document.querySelector('[data-scrollCrtl="navSrcl"]')
+let slideAnchor = document.querySelector('[data-scrollCrtl="slideSrcl"]');
 let aboutAnchor = document.querySelector('[data-scrollCrtl="aboutSrcl"]');
 let mvvAnchor = document.querySelector('[data-scrollCrtl="mvvScrl"]');
 let wrkFlwAnchor = document.querySelector('[data-scrollCrtl="wrkflwScrl"]')
@@ -87,22 +90,34 @@ topBtn.addEventListener('click', ()=> {
   });
 });
 
-aboutBtn.addEventListener('click', ()=> {
-  window.scroll({
-    top: aboutAnchor.scrollHeight,
-    left: 0,
-    behavior: "smooth",
+for (let i = 0; i < aboutBtn.length; i++) {
+  aboutBtn[i].addEventListener('click', ()=> {
+    window.scroll({
+      top: slideAnchor.scrollHeight,
+      left: 0,
+      behavior: "smooth",
+    });
   });
-});
 
-projectsBtn.addEventListener('click', ()=> {
-  let scrollY = (aboutAnchor.scrollHeight + mvvAnchor.scrollHeight + wrkFlwAnchor.scrollHeight + projectsAnchor.scrollHeight) - 30
-  window.scroll({
-    top: scrollY,
-    left: 0,
-    behavior: "smooth",
+  projectsBtn[i].addEventListener('click', ()=> {
+    let scrollY = (navAnchor.scrollHeight + slideAnchor.scrollHeight + aboutAnchor.scrollHeight + mvvAnchor.scrollHeight + wrkFlwAnchor.scrollHeight)
+    window.scroll({
+      top: scrollY,
+      left: 0,
+      behavior: "smooth",
+    });
   });
+}
+
+// MOBILE NAVBAR
+const shwBtn = document.querySelector('[data-mblNav="showBtn"]');
+const navMenu = document.querySelector('[data-mblNav="nav-menu"]');
+
+shwBtn.addEventListener('click', ()=> {
+  if (navMenu.classList.contains('mblnav__container--active')) {
+    navMenu.classList.remove('mblnav__container--active');
+  } else {
+    navMenu.classList.add('mblnav__container--active');
+  }
 });
-
-
 

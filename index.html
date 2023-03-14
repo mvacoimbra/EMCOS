@@ -18,10 +18,15 @@
 
 <body>
     <!-- BARRA DE NAVEGAÇÃO -->
-    <header>
+    <header data-scrollCrtl="navSrcl">
         <div class="nav__wrapper"></div>
         <nav class="nav__container">
-            <a><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="nav__logo" data-theme="logo" data-scrollCrtl="topBtn"></a>
+            <a class="nav__logo__wrap"><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="nav__logo" data-theme="logo" data-scrollCrtl="topBtn"></a>
+
+            <div class="mblnav__button__wrapper">
+                <button class="mblnav__button fa-solid fa-bars" data-mblNav="showBtn""></button>
+            </div>
+
             <div class="menu__wrapper">
                 <ul class="nav__menu">
                     <li class="nav__menu__item">
@@ -46,8 +51,32 @@
             </div>
         </nav>
     </header>
+
+    <!-- NAVEGAÇÃO MOBILE -->
+    <aside class="mblnav__container" data-mblNav="nav-menu">
+        <div class="mblnav__wrapper">
+            <ul class="mblnav__menu">
+                <li class="mblnav__menu__item">
+                    <a class="mblnav__navlink" data-scrollCrtl="aboutBtn">Quem somos</a>
+                </li>
+                <li class="mblnav__menu__item">
+                    <a class="mblnav__navlink" data-scrollCrtl="projectsBtn">Projetos</a>
+                </li>
+                <li class="mblnav__menu__item">
+                    <a href="" class="mblnav__navlink">Contato</a>
+                </li>
+                <li class="mblnav__menu__item mblnav__bgtBtn">
+                    <a href="" class="mblnav__navlink">Orçamento</a>
+                </li>
+                <li class="mblnav__menu__item">
+                    <button class="mblnav__themeBtn fa-solid fa-moon" data-theme="btn"></button>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
     <!-- CARROSSEL -->
-    <div class="wrapper">
+    <div class="wrapper" data-scrollCrtl="slideSrcl">
         <div class="slide-wrapper" data-slide="wrapper">
             <!-- botões do carrossel -->
             <button class="slide-nav-button slide-nav-previous fas fa-chevron-left"
@@ -98,6 +127,7 @@
         </div>
     </div>
     <script src="./js/slides.js"></script>
+
     <!-- CONTROLES CARROSSEL -->
     <script>
         initSlider({

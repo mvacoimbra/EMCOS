@@ -111,10 +111,10 @@ header {
   width: 100%;
   max-width: 1920px;
   /* alinhamentos */
-  display: grid;
-  grid-template-columns: 30% 70%;
-  align-items: center;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   padding-left: 100px;
   /* estilos */
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
@@ -123,6 +123,12 @@ header {
   z-index: 2;
   top: 0;
 }
+
+.nav__logo__wrap {
+  width: 30%;
+  height: 100%;
+}
+
 
 .nav__logo {
   width: 194.83px;
@@ -136,6 +142,7 @@ header {
 
 .menu__wrapper {
   height: 100%;
+  width: 70%;
 }
 
 .nav__menu {
@@ -152,7 +159,7 @@ header {
   background: url("../imgs/header/greenBg4k.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 90px;
 }
 
 .nav__menu__item:hover {
@@ -204,7 +211,24 @@ header {
   transform: translateX(140px);
 }
 
-/* botão mobile */
+/* NAVEGAÇAO MOBILE */
+.mblnav__button {
+  display: none;
+}
+
+.mblnav__button__wrapper {
+  display: none;
+}
+
+.mblnav__container {
+  display: none;
+}
+
+
+
+
+
+
 
 /* CARROSSEL (estilo do carrossel está no slides.css) ----------------------------------------------------------------------*/
 
@@ -319,20 +343,20 @@ header {
 .leftTrans--scroll {
   opacity: 0;
   transform: translateX(-200px);
-  transition: all 0.4s ease-out;
+  transition: transform 0.4s ease-out;
   transition-delay: 0.2s;
 }
 
 .centerTrans--scroll {
   opacity: 0;
-  transition: all 0.4s ease-out;
+  transition: transform 0.4s ease-out;
   transition-delay: 0.4s;
 }
 
 .rightTrans--scroll {
   opacity: 0;
   transform: translateX(200px);
-  transition: all 0.4s ease-out;
+  transition: transform 0.4s ease-out;
   transition-delay: 0.2s;
 }
 
@@ -945,8 +969,11 @@ td {
 @media screen and (max-width: 450px) {
   /* BARRA DE NAVEGAÇÃO ------------------------------------------------------- */
   .nav__container {
-    grid-template-columns: 50% 50%;
+    display: flex;
     padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
 
   .nav__menu {
@@ -957,6 +984,94 @@ td {
   .nav__menu__item {
     display: none;
   }
+
+  .menu__wrapper {
+    display: none;
+  }
+
+  .mblnav__button__wrapper {
+    display: flex;
+    width: 36%;
+    justify-content: right;
+  }
+
+  .mblnav__button {
+    color: var(--clr-scheme-blck);
+    font-size: 26px;
+    background: none;
+  }
+
+  .mblnav__button--active {
+    scale: 1.01;
+    cursor: pointer;
+  }
+
+  .mblnav__container {
+    display: flex;
+    text-align: center;
+    position: fixed;
+    background: var(--navbarBg);
+    border-bottom-left-radius: 20px;
+    /* border-bottom-right-radius: 20px; */
+    z-index: 2;
+    right: 0px;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transform: translate(200px, 0);
+    transition: transform 1s ease-in-out;
+  }
+
+  .mblnav__container--active {
+    transform: translate(0px, 0);
+    transition: transform 1s ease-in;
+  }
+
+  .mblnav__wrapper {
+    width: 100%;
+  }
+
+  .mblnav__menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+  }
+
+  .mblnav__menu__item {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .mblnav__navlink {
+    width: 100%;
+    text-decoration: none;
+    color: var(--clr-scheme-blck);
+  }
+
+  .mblnav__themeBtn {
+    border-bottom-left-radius: 20px;
+    font-size: 20px;
+    background: none;
+    padding-bottom: 5px;
+    color: var(--clr-scheme-blck);
+  }
+
+  /* .mblnav__bgtBtn {
+
+  } */
+
+  .mblnav__bgtBtn a {
+    color: var(--clr-scheme-grn);
+  }
+
+  
+
+
+
+
 
   /* QUEM SOMOS ------------------------------------------------------- */
   .main__container {
