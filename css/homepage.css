@@ -1104,7 +1104,11 @@ td {
   /* M V V ------------------------------------------------------- */
   .mvv__container {
     height: 100%;
-    background: var(--clr-scheme-drk-gry);
+    background: #221e1e;
+  }
+
+  body.darkTheme .mvv__container {
+    background: #1c5027;
   }
 
   .mvv__wrapper {
