@@ -17,7 +17,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.1,
+    threshold: 0.3,
   }
 );
 
@@ -100,7 +100,7 @@ for (let i = 0; i < aboutBtn.length; i++) {
   });
 
   projectsBtn[i].addEventListener('click', ()=> {
-    let scrollY = (navAnchor.scrollHeight + slideAnchor.scrollHeight + aboutAnchor.scrollHeight + mvvAnchor.scrollHeight + wrkFlwAnchor.scrollHeight)
+    let scrollY = (navAnchor.scrollHeight + slideAnchor.scrollHeight + aboutAnchor.scrollHeight + mvvAnchor.scrollHeight + wrkFlwAnchor.scrollHeight) - 10
     window.scroll({
       top: scrollY,
       left: 0,

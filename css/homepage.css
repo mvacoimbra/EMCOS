@@ -224,28 +224,59 @@ header {
   display: none;
 }
 
+/* BOTÃO WHATSAPP */
+.zapBtn__container {
+  display: flex;
+  max-width: 220px;
+  position: fixed;
+  z-index: 1;
+  right: 10px;
+  top: 85vh;
+}
 
+.zapBtn__link {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1px;
+  text-decoration: none;
+  color: var(--clr-scheme-wht);
+  font-weight: 600;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--grn-grad-bg);
+  padding: 5px 20px;
+  border-radius: 60px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
 
+.zapBtn__link:hover {
+  scale: 1.05;
+}
 
-
-
+.zapBtn__icon {
+  font-size: 40px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
 
 /* CARROSSEL (estilo do carrossel está no slides.css) ----------------------------------------------------------------------*/
 
 /* QUEM SOMOS ----------------------------------------------------------------------*/
 .main__container {
   overflow: hidden;
-  height: 90vh;
   max-height: 1080px;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-items: center;
+  padding: 50px 0;
 }
 
 .main__wrapper {
   display: flex;
-  align-content: center;
+  align-items: center;
+  justify-content: center;
   column-gap: 30px;
 }
 
@@ -286,7 +317,7 @@ header {
 
 .mvv__container {
   margin-top: 0px;
-  height: 80vh;
+  padding: 50px 0;
   max-height: 1080px;
   max-width: 100%;
   overflow: hidden;
@@ -315,6 +346,7 @@ header {
   flex-direction: column;
   text-align: center;
   color: var(--clr-scheme-wht);
+  flex-shrink: 0;
 }
 
 .circle h2 {
@@ -343,20 +375,20 @@ header {
 .leftTrans--scroll {
   opacity: 0;
   transform: translateX(-200px);
-  transition: transform 0.4s ease-out;
+  transition: all 0.4s ease-out;
   transition-delay: 0.2s;
 }
 
 .centerTrans--scroll {
   opacity: 0;
-  transition: transform 0.4s ease-out;
+  transition: all 0.4s ease-out;
   transition-delay: 0.4s;
 }
 
 .rightTrans--scroll {
   opacity: 0;
   transform: translateX(200px);
-  transition: transform 0.4s ease-out;
+  transition: all 0.4s ease-out;
   transition-delay: 0.2s;
 }
 
@@ -546,14 +578,15 @@ header {
 
 .logos__wrapper {
   display: flex;
-  column-gap: 15px;
-  row-gap: 15px;
+  column-gap: 10px;
+  row-gap: 10px;
   margin-bottom: 50px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logo__box {
-  width: 320px;
+  width: 300px;
   height: 200px;
   padding: 25px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -931,7 +964,7 @@ td {
   scale: 1.1;
 }
 
-/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
 
 @media screen and (max-width: 896px) {
   header {
@@ -963,7 +996,7 @@ td {
   }
 }
 
-/* ------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
 
 /* responsividade para mobile */
 @media screen and (max-width: 450px) {
@@ -1012,7 +1045,6 @@ td {
     position: fixed;
     background: var(--navbarBg);
     border-bottom-left-radius: 20px;
-    /* border-bottom-right-radius: 20px; */
     z-index: 2;
     right: 0px;
     width: 40%;
@@ -1059,19 +1091,14 @@ td {
     color: var(--clr-scheme-blck);
   }
 
-  /* .mblnav__bgtBtn {
-
-  } */
-
   .mblnav__bgtBtn a {
     color: var(--clr-scheme-grn);
   }
 
-  
-
-
-
-
+  /* BOTÃO WHATSAPP --------------------------------------------------- */
+  .zapBtn__desc {
+    display: none;
+  }
 
   /* QUEM SOMOS ------------------------------------------------------- */
   .main__container {

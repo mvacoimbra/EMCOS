@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imgs/header/emcos-icon.png" />
+    <link rel="stylesheet" href="css/orcamento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" />
+    <title>EMCOS Engenharia | Orçamento</title>
+    <link rel="icon" type="image/png" href="imgs/header/emcos-icon.png" />
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <header data-scrollCrtl="navSrcl">
+        <div class="nav__wrapper"></div>
+        <nav class="nav__container">
+            <a class="nav__logo__wrap"><img src="imgs/header/emcos-logo.png" alt="EMCOS" class="nav__logo" data-theme="logo" data-scrollCrtl="topBtn"></a>
+
+            <div class="mblnav__button__wrapper">
+                <button class="mblnav__button fa-solid fa-bars" data-mblNav="showBtn""></button>
+            </div>
+
+            <div class="menu__wrapper">
+                <ul class="nav__menu">
+                    <li class="nav__menu__item">
+                        <img src="imgs/header/nav-item-dec.png">
+                        <a href="index.html" class="header__navlink" data-scrollCrtl="aboutBtn">Quem somos</a>
+                    </li>
+                    <li class="nav__menu__item">
+                        <img src="imgs/header/nav-item-dec.png">
+                        <a href="contato.html" class="header__navlink">Contato</a>
+                    </li>
+                    <li class="nav__menu__item nav__button">
+                        <a href="orcamento.html" class="header__navlink">Orçamento</a>
+                    </li>
+                    <li class="nav__menu__item">
+                        <button class="nav__themeBtn fa-solid fa-moon" data-theme="btn"></button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- NAVEGAÇÃO MOBILE -->
+    <aside class="mblnav__container" data-mblNav="nav-menu">
+        <div class="mblnav__wrapper">
+            <ul class="mblnav__menu">
+                <li class="mblnav__menu__item">
+                    <a href="index.html" class="mblnav__navlink" data-scrollCrtl="aboutBtn">Quem somos</a>
+                </li>
+                <li class="mblnav__menu__item">
+                    <a href="contato.html" class="mblnav__navlink">Contato</a>
+                </li>
+                <li class="mblnav__menu__item mblnav__bgtBtn">
+                    <a href="orcamento.html" class="mblnav__navlink">Orçamento</a>
+                </li>
+                <li class="mblnav__menu__item">
+                    <button class="mblnav__themeBtn fa-solid fa-moon" data-theme="btn"></button>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- BOTÃO WHATSAPP -->
+    <div class="zapBtn__container">
+        <a href="https://wa.me/5562996302698?text=Ol%C3%A1%21+Gostaria+de+tirar+uma+d%C3%BAvida+sobre..." target="_blank" class="zapBtn__link">
+            <i class="fa-brands fa-whatsapp zapBtn__icon"></i>
+            <h2 class="zapBtn__desc">Podemos te ajudar?</h2>
+        </a>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="footer__container">
+        <div class="footer__div--1">
+            <div class="footer__desc">
+                <h2>Ficou com alguma dúvida? A EMCOS está aqui para te ouvir. Mande sua mensagem e conte conosco para te ajudar!</h2>
+            </div>
+            <div class="footer__openHr">
+                <div class="openHr__desc">
+                    <p>Estamos disponíveis para te atender pessoalmente nos seguintes horários:</p>
+                </div>
+                <div class="openHr__table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="column--1">Seg. a Qui.</th>
+                                <th>Sex.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="column--1">07:00</td>
+                                <td>07:00</td>
+                            </tr>
+                            <tr>
+                                <td class="column--1">17:00</td>
+                                <td>16:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__div--2">
+            <div class="footer__logo">
+                <img src="./imgs/footer/white-logo.png" alt="" class="footer__logoImg">
+            </div>
+            <div class="footer__bar"></div>
+
+            <div class="footer__contact">
+                <p>Avenida Brasil, Q39 L17, Bairro de Lourdes, 75095-795, Anápolis - GO.</p>
+                <p>contato@emcos.com.br</p>
+                <p>(62) 99630-2698</p>
+                <p>(62) 3976-4774</p>
+                <ul class="footer__socials">
+                    <li><a href="https://wa.me/5562996302698?text=Ol%C3%A1%21+Gostaria+de+tirar+uma+d%C3%BAvida+sobre..." target="_blank" class="fa-brands fa-whatsapp"></a></li>
+                    <li><a href="https://www.instagram.com/emcosengenharia/" target="_blank" class="fa-brands fa-instagram"></a></li>
+                    <li><a href="https://www.linkedin.com/company/emcos/" target="_blank" class="fa-brands fa-linkedin"></a></li>
+                    <li><a href="https://www.facebook.com/Emcosengenharia/" target="_blank" class="fa-brands fa-facebook"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/infra.js"></script>
+</body>
+
+</html>
